@@ -31,7 +31,7 @@
     {
       "institution": "Adarsh Public School",
       "address": "New Delhi, India",
-      "degree_title": "Higher Secondary School Certificate (HSC or High School Diploma)",
+      "degree_title": "Higher Secondary School Certificate (High School Diploma)",
       "degree_concentration": "Central Board of Secondary Education (CBSE) (English Lit. and Comm., Physics, Mathematics, Chemistry, Computer Science)",
       "term": "April 2014 - May 2018",
       "grades": [
@@ -67,7 +67,7 @@
   ],
   "research": [
     {
-      "title": "Reading: On Gravitational and Electromagnetic memory effect and soft theorems",
+      "title": "(Reading) On Gravitational and Electromagnetic memory effect and soft theorems",
       "time": "Winter 2018/19",
       "details": [
         "Based on Strominger's review arXiv:1703.05448 on the subject",
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "title": "Reading: Obtaining hydrodynamics from equilibrium partition functions",
+      "title": "(Reading) Obtaining hydrodynamics from equilibrium partition functions",
       "time": "Summer 2019",
       "details": [
         "Based on arXiv:1203.3544",
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "title": "Reading: Electric-magnetic type dualities in Field theories",
+      "title": "(Reading) Electric-magnetic type dualities in Field theories",
       "time": "Summer 2019",
       "details": [
         "Based on JM Figueroa-O’Farrill - Electromagnetic Duality for Children (https://www.maths.ed.ac.uk/~jmf/Teaching/Lectures/EDC.pdf)",
@@ -120,6 +120,81 @@
       "details": ["With Dr. Ayan Mukhopadhyay and Tanay Kibe", ""]
     }
   ],
+  "coursework": {
+    "credited": [],
+    "audited": [],
+    "self-study": []
+  },
+  "skills": {
+    "Mathematics": {
+      "fluent": [
+        "Linear Algebra",
+        "Ordinary and Partial Differential Equations",
+        "Multivariable Calculus"
+      ],
+      "intermediate": [
+        "Real and Complex Analysis",
+        "Several Complex Variables",
+        "Algebraic Topology",
+        "Group and Representation Theory",
+        "Dynamical systems and chaos"
+      ],
+      "basic": ["Functional Analysis", "Differential Geometry"],
+      "familiar": [
+        "Algebraic Geometry and applications to physics",
+        "Category theory and categorical viewpoint"
+      ]
+    },
+    "Computational": {
+      "fluent": ["Mathematica"],
+      "intermediate": ["Python with NumPy, SciPy, Matplotlib, Pandas"],
+      "basic": ["Cadabra", "SageMath", "MATLAB"]
+    },
+    "Typesetting": {
+      "intermediate": ["LaTeX", "Microsoft/Google Office Suite", "Markdown"]
+    },
+    "Programming": {
+      "fluent": ["Python", "Javascript/Typescript"],
+      "intermediate": ["C", "C++", "Bash"],
+      "basic": ["Go", "Ruby", "Java", "Web Assembly", "x86 Assembly"]
+    },
+    "Web Development": {
+      "intermediate": [
+        "HTML5",
+        "CSS3",
+        "Javascipt/DOM",
+        "Basic web design in Figma and good understanding of design systems",
+        "MERN (MongoDB, ExpressJS, ReactJS, NodeJS) Stack"
+      ],
+      "familiar": ["Angular", "VueJS"]
+    },
+    "Misc": {
+      "fluent": ["Git/GitHub"],
+      "basic": [
+        "Statistical Inference and Analysis",
+        "Research Methodology",
+        "Digital Electronics and Microprocessors",
+        "Computer Architecture (particularly of the simple 8-bit 6052)",
+        "Data Structures and Algorithms and implementation in Python and Javascript",
+        "Software Design Patterns",
+        "Understanding of Machine Learning and Deep Learning and familiarity with Tensorflow"
+      ]
+    },
+    "Soft Skills": {
+      "intermeddiate": [
+        "Team collaboration",
+        "Communication",
+        "Critical observation and problem solving",
+        "Conflict resolution and negotiation"
+      ],
+      "basic": ["Leadership", "Time Management/Scheduling"]
+    },
+    "Languages": {
+      "fluent": ["English", "Hindi"],
+      "basic": ["German"]
+    }
+  },
+  "camps/conferences": [],
   "exams": [
     {
       "name": "JEE Advanced",
@@ -139,5 +214,7 @@
       "rank": "332 (among over 100K participants)",
       "organized_by": "DST (see above)"
     }
-  ]
+  ],
+  "talks/lectures": [],
+  "volunteering/extra-curricular": []
 }
