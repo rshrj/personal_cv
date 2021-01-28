@@ -1,0 +1,135 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{palatino}
+\usepackage{titling}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[en-US]{datetime2}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome}
+
+\makeatletter
+\newcommand{\monthyeardate}{%
+  \DTMenglishmonthname{\@dtm@month}, \@dtm@year
+}
+\makeatother
+
+\titleformat{\section}
+{\bfseries\scshape\Large}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}[block]
+{\normalfont\bfseries\Large}
+{}
+{0em}
+{}
+
+\titlespacing{\subsection}{0.02\linewidth}{1em}{0em}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
+\renewcommand{\baselinestretch}{1.2}
+
+\newcommand{\Mail}[1]{\href{mailto:#1}{#1}}
+\newcommand{\Website}[1]{\href{https://#1}{#1}}
+
+\renewcommand{\maketitle}{
+{\Huge\mdseries\theauthor}\hfill{\color{Gray}\small\itshape \thetitle \hspace{0.1em} (Updated -- \monthyeardate)\vspace{0.2cm}}
+
+Third year undergraduate student and researcher in Theoretical Physics \vspace{0.3cm}
+
+\hspace{0.1cm}\parbox{1\linewidth}{
+    {\small\color[HTML]{333333}
+        {\faSend} \hspace{0.2cm} \Mail{rishiraj.1012exp@gmail.com} \hspace{0.5em} --- \hspace{0.5em} \Mail{rshrj@smail.iitm.ac.in} \hspace{0.5em} --- \hspace{0.5em} \href{tel:+917982936310}{+91 (79829) 36310} \\
+        \, \faMapMarker \hspace{0.3cm} \href{https://goo.gl/maps/Y1KDvzKp8cHYy8iY8}{443, Ganga Hostel, IIT Madras, Chennai - 600036} \\
+        \faGlobe \hspace{0.2cm} \Website{rishi.vision}
+    }
+}\vspace{0.3cm}
+
+% Interests include High Energy Physics (theory), Mathematical Physics, Quantum Gravity and String theory, Quantum Field Theories, etc.
+}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{
+  \fontsize{10pt}{12pt}\selectfont
+  \theauthor
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \thetitle
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \monthyeardate
+}
+\rhead{}
+\cfoot{\fontsize{10pt}{0}\selectfont \thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Curriculum Vit\ae}
+\author{Rishi Raj}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\section{Education}
+
+\subsection{Indian Institute of Technology (IIT) Madras \hfill \large{Aug 2018 -- Present}}
+\hspace{0.02\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Chennai, India} \\
+    {\small Bachelor (Honors) and Master in Science (BS (Hons.) - MS Dual Degree) \\
+    Physics (major), Mathematics (minor) \\
+    Average GPA: 9.0/10 \\
+    Recent semester GPA: 9.43/10}
+}
+
+\subsection{Adarsh Public School \hfill \large{April 2014 -- May 2018}}
+\hspace{0.02\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{New Delhi, India} \\
+    {\small Higher Secondary School Certificate (High School Diploma) \\
+    Central Board of Secondary Education (CBSE) (English Lit. and Comm., Physics, Mathematics, Chemistry, Computer Science) \\
+    Secondary School Certificate (SSC) GPA: 9.8/10 \\
+    Higher Secondary Certificate (HSC): 93.8\%}
+}
+
+\subsection{Adarsh Model School \hfill \large{2005 -- March 2014}}
+\hspace{0.02\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{New Delhi, India} \\
+    {\small Pre-school to Eighth Grade \\
+    Final Grade: A++ with distinction (Ranked first)}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fellowships / Grants}
+
+\subsection{KVPY Fellow \hfill \large{Aug 2018 -- Present}}
+\hspace{0.02\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Department of Science and Technology (DST), Government of India} \\
+    {\small (Kishore Vaigyanik Protsahan Yojana) Monthly stipend, travel grant and access to national laboratories and libraries till Pre-PhD level}
+}
+
+\subsection{FIITJEE Rewards Fellowship \hfill \large{Aug 2018 -- Present}}
+\hspace{0.02\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{FIITJEE Limited} \\
+    {\small A net monetary reward based on achievements in national level competitive exams like JEE (below) and KVPY}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Experience}
+
+\subsection{\large On Gravitational and Electromagnetic memory \hfill \large{Winter 2018/19} \\ effect and soft theorems}
+
+\end{document}
