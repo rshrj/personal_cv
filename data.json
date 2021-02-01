@@ -1,6 +1,7 @@
 {
   "header": {
-    "name": "Rishi Raj",
+    "firstName": "Rishi",
+    "lastName": "Raj",
     "title": "Third year undergraduate student and researcher in Theoretical Physics",
     "email_primary": "rishiraj.1012exp@gmail.com",
     "email_school": "rshrj@smail.iitm.ac.in",
@@ -10,15 +11,15 @@
       "link": "https://goo.gl/maps/JKySTvz1qivcsB8N9"
     },
     "orcid": "0000-0002-1310-1025",
-    "website": "https://rishi.vision"
+    "website": "https://rishi.vision",
+    "research_interests": [
+      "Theoretical Physics",
+      "High Energy Physics (theory)",
+      "Mathematical Physics",
+      "Quantum Gravity and String theory",
+      "Quantum Field Theories"
+    ]
   },
-  "research_interests": [
-    "Theoretical Physics",
-    "High Energy Physics (theory)",
-    "Mathematical Physics",
-    "Quantum Gravity and String theory",
-    "Quantum Field Theories"
-  ],
   "education": [
     {
       "institution": "Indian Institute of Technology (IIT) Madras",
@@ -91,18 +92,18 @@
       ]
     },
     {
-      "title": "Semiholographic networks, black holes and information processing",
-      "time": "July 2019 - May 2020",
-      "details": [
-        "With Dr. Ayan Mukhopadhyay (Assistant Professor, Department of Physics, IIT Madras)"
-      ]
-    },
-    {
       "title": "(Experimental) Modes of magnetically coupled pendula",
       "time": "Winter 2019/20",
       "details": [
         "Part of the NIUS Science Camp (see Camps and Conferences) and Fellowship mentored by Dr. Praveen Pathak of HBCSE",
         "Created an experimental setup of pendula with cylindrical bar magnets attached to their ends and confined to move in a plane. Wrote down a simple theoretical model of this system and compared with the data taken experimentally, systematically taking care of biases and errors. Found a reasonable and expected degree of experimental agreement."
+      ]
+    },
+    {
+      "title": "Semiholographic networks, black holes and information processing",
+      "time": "July 2019 - May 2020",
+      "details": [
+        "With Dr. Ayan Mukhopadhyay (Assistant Professor, Department of Physics, IIT Madras)"
       ]
     },
     {

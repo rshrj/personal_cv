@@ -6,15 +6,21 @@
 \usepackage{titling}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[en-US]{datetime2}
-\usepackage{fancyhdr}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,hyperfootnotes=false]{hyperref}
 \usepackage{fontawesome}
+\usepackage[none]{hyphenat}
+\usepackage{lipsum}
+\usepackage{amsmath}
+
+% Date
 
 \makeatletter
 \newcommand{\monthyeardate}{%
   \DTMenglishmonthname{\@dtm@month}, \@dtm@year
 }
 \makeatother
+
+
 
 \titleformat{\section}
 {\bfseries\scshape\Large}
@@ -28,24 +34,34 @@
 {0em}
 {}
 
-\titlespacing{\subsection}{0.02\linewidth}{1em}{0em}
+% Lengths
+
+\titlespacing{\section}{0.0\linewidth}{2em}{1em}
+\titlespacing{\subsection}{0.0\linewidth}{1.5em}{0.5em}
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0em}
 \renewcommand{\baselinestretch}{1.2}
 
-\newcommand{\Mail}[1]{\href{mailto:#1}{#1}}
-\newcommand{\Website}[1]{\href{https://#1}{#1}}
+% Some useful commands
+
+\newcommand{\arxiv}[1]{\slink{https://arxiv.org/abs/#1}{arXiv:#1}}
+\newcommand{\Mail}[1]{\slink{mailto:#1}{#1}}
+\newcommand{\Website}[1]{\slink{https://#1}{#1}}
+
+\newcommand{\AdS}{\text{AdS}}
+
+\newcommand{\slink}[2]{\href{#1}{\underline{\smash{#2}}}}
 
 \renewcommand{\maketitle}{
 {\Huge\mdseries\theauthor}\hfill{\color{Gray}\small\itshape \thetitle \hspace{0.1em} (Updated -- \monthyeardate)\vspace{0.2cm}}
 
-Third year undergraduate student and researcher in Theoretical Physics \vspace{0.3cm}
+{Third year undergraduate student and researcher in Theoretical Physics} \vspace{0.3cm}
 
 \hspace{0.1cm}\parbox{1\linewidth}{
     {\small\color[HTML]{333333}
-        {\faSend} \hspace{0.2cm} \Mail{rishiraj.1012exp@gmail.com} \hspace{0.5em} --- \hspace{0.5em} \Mail{rshrj@smail.iitm.ac.in} \hspace{0.5em} --- \hspace{0.5em} \href{tel:+917982936310}{+91 (79829) 36310} \\
-        \, \faMapMarker \hspace{0.3cm} \href{https://goo.gl/maps/Y1KDvzKp8cHYy8iY8}{443, Ganga Hostel, IIT Madras, Chennai - 600036} \\
+        {\faSend} \hspace{0.1cm} \Mail{rishiraj.1012exp@gmail.com} \hspace{0.5em} --- \hspace{0.5em} \Mail{rshrj@smail.iitm.ac.in} \hspace{0.5em} --- \hspace{0.5em} \slink{tel:+917982936310}{+91 (79829) 36310} \\
+        \, \faMapMarker \hspace{0.3cm} \slink{https://goo.gl/maps/Y1KDvzKp8cHYy8iY8}{443, Ganga Hostel, IIT Madras, Chennai - 600036} \\
         \faGlobe \hspace{0.2cm} \Website{rishi.vision}
     }
 }\vspace{0.3cm}
@@ -53,20 +69,6 @@ Third year undergraduate student and researcher in Theoretical Physics \vspace{0
 % Interests include High Energy Physics (theory), Mathematical Physics, Quantum Gravity and String theory, Quantum Field Theories, etc.
 }
 
-
-\pagestyle{fancy}
-\fancyhf{}
-\chead{
-  \fontsize{10pt}{12pt}\selectfont
-  \theauthor
-  \hspace{0.2cm} -- \hspace{0.2cm}
-  \thetitle
-  \hspace{0.2cm} -- \hspace{0.2cm}
-  \monthyeardate
-}
-\rhead{}
-\cfoot{\fontsize{10pt}{0}\selectfont \thepage}
-\renewcommand{\headrulewidth}{0pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -82,7 +84,7 @@ Third year undergraduate student and researcher in Theoretical Physics \vspace{0
 \section{Education}
 
 \subsection{Indian Institute of Technology (IIT) Madras \hfill \large{Aug 2018 -- Present}}
-\hspace{0.02\linewidth}
+\hspace{0.01\linewidth}
 \parbox{0.88\linewidth}{
     \textit{Chennai, India} \\
     {\small Bachelor (Honors) and Master in Science (BS (Hons.) - MS Dual Degree) \\
@@ -92,7 +94,7 @@ Third year undergraduate student and researcher in Theoretical Physics \vspace{0
 }
 
 \subsection{Adarsh Public School \hfill \large{April 2014 -- May 2018}}
-\hspace{0.02\linewidth}
+\hspace{0.01\linewidth}
 \parbox{0.88\linewidth}{
     \textit{New Delhi, India} \\
     {\small Higher Secondary School Certificate (High School Diploma) \\
@@ -101,35 +103,315 @@ Third year undergraduate student and researcher in Theoretical Physics \vspace{0
     Higher Secondary Certificate (HSC): 93.8\%}
 }
 
-\subsection{Adarsh Model School \hfill \large{2005 -- March 2014}}
-\hspace{0.02\linewidth}
-\parbox{0.88\linewidth}{
-    \textit{New Delhi, India} \\
-    {\small Pre-school to Eighth Grade \\
-    Final Grade: A++ with distinction (Ranked first)}
-}
+% \subsection{Adarsh Model School \hfill \large{2005 -- March 2014}}
+% \hspace{0.01\linewidth}
+% \parbox{0.88\linewidth}{
+%     \textit{New Delhi, India} \\
+%     {\small Pre-school to Eighth Grade \\
+%     Final Grade: A++ with distinction (Ranked first)}
+% }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fellowships / Grants}
 
 \subsection{KVPY Fellow \hfill \large{Aug 2018 -- Present}}
-\hspace{0.02\linewidth}
+\hspace{0.01\linewidth}
 \parbox{0.88\linewidth}{
     \textit{Department of Science and Technology (DST), Government of India} \\
     {\small (Kishore Vaigyanik Protsahan Yojana) Monthly stipend, travel grant and access to national laboratories and libraries till Pre-PhD level}
 }
 
-\subsection{FIITJEE Rewards Fellowship \hfill \large{Aug 2018 -- Present}}
-\hspace{0.02\linewidth}
-\parbox{0.88\linewidth}{
-    \textit{FIITJEE Limited} \\
-    {\small A net monetary reward based on achievements in national level competitive exams like JEE (below) and KVPY}
-}
+% \subsection{FIITJEE Rewards Fellowship \hfill \large{Aug 2018 -- Present}}
+% \hspace{0.01\linewidth}
+% \parbox{0.88\linewidth}{
+%     \textit{FIITJEE Limited} \\
+%     {\small A net monetary reward based on achievements in national level competitive exams like JEE (below) and KVPY}
+% }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Research Experience}
 
-\subsection{\large On Gravitational and Electromagnetic memory \hfill \large{Winter 2018/19} \\ effect and soft theorems}
+\subsection{\parbox{0.75\linewidth}{\large $\AdS_3$ Black holes and their hair} \hfill \large{Dec 2020 -- Present}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small With Dr. Ayan Mukhopadhyay\footnotemark[1] and Tanay Kibe\footnotemark[2] \\
+    Exploring the three-dimensional version of the no-hair theorem in the context of fragmented AdS geometries and Virasoro charges in near-horizon physics.}
+}
+
+\footnotetext[1]{Assistant Professor, Department of Physics, IIT Madras}
+\footnotetext[2]{PhD Candidate, Department of Physics, IIT Madras}
+
+\subsection{\parbox{0.75\linewidth}{\large Black Holes and Hawking quanta in Matrix models} \hfill \large{Aug 2020 -- Present}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small With Dr. Vishnu Jejjala\footnotemark[3], Dr. Ayan Mukhopadhyay and Tanay Kibe \\
+    Aiming to understand and reproduce features of Black holes like the classical no-hair theorem, Hawking evaporation and information loss, and AdS2 fragmentation in BFSS Matrix model \\
+    Currently working on developing a collective field theory desciption of BFSS Matrix theory and understanding quantum coherent states and relation to fuzzy geometries in the said Matrix model}
+}
+
+\footnotetext[3]{{Professor, School of Physics, University of the Witwatersrand}}
+
+\subsection{\parbox{0.75\linewidth}{\large Semiholographic networks, black holes and information processing} \hfill \large{Fall 2019}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small With the group of Dr. Ayan Mukhopadhyay \\
+    Used the semiholographic approach to non-perturbative physics developed by Mukhopadhyay and collegues (see e.g., \arxiv{1805.05213}) to form a set of simple toy networks of democratically coupled scalar fields and fluids and looked at its response to external signals for interesting pattern recognition capabilities similar to a deep neural network.}
+}
+
+\subsection{\parbox{0.75\linewidth}{\large Modes of magnetically coupled pendula (Experimental)} \hfill \large{Winter 2019/20}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small Part of the NIUS Physics Camp (see Camps and Conferences) and Fellowship mentored by Dr. Praveen Pathak of HBCSE \\
+    Created an experimental setup of pendula with cylindrical bar magnets attached to their ends and confined to move in a plane. Wrote down a simple theoretical model of this system and compared with the data taken experimentally, systematically taking care of biases and errors. Found a reasonable and expected degree of experimental agreement.}
+}
+
+\subsection{\parbox{0.75\linewidth}{\large Electric-magnetic type dualities in Field theories (Reading)} \hfill \large{Summer 2019}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small Based on \slink{https://www.maths.ed.ac.uk/~jmf/Teaching/Lectures/EDC.pdf}{JM Figueroa-O’Farrill - Electromagnetic Duality for Children} \\
+    Learnt about the Montonen-Olive and similar duality conjectures, Witten effect and the larger SL(2, Z) duality of N=4 SYM}
+}
+
+\subsection{\parbox{0.75\linewidth}{\large Obtaining hydrodynamics from equilibrium partition functions (Reading)} \hfill \large{Summer 2019}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small Based on \arxiv{1203.3544} \\
+    Learnt a lot about modern relativistic hydrodynamics and how transport coefficients are significantly constrained by consistency requirements with thermal parition functions in QFTs in stationary background spacetimes}
+}
+
+\subsection{\parbox{0.75\linewidth}{\large On Gravitational and Electromagnetic memory effect and soft theorems (Reading)} \hfill \large{Winter 2018/19}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small Based on Strominger's review \arxiv{1703.05448} on the subject \\
+    Developed a good understanding of memory effect, soft theorems and assymptotic symmetries and the relationship between them in the infrared sector of field theories}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Relevent Coursework}
+
+\subsection{\large Credited}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{(Fall 2018)} --- \small Physics I -- S\footnotemark[4], Thermodynamics and Kinetic Theory -- A} \\
+    {\textit{(Autumn 2019)} --- \small Differential Equations -- S, Physics II -- S} \\
+    {\textit{(Fall 2019)} --- \small Introduction to Mathematical Physics -- S, Probability, Statistics and Stochastic Process -- A, Mathematics on the computer -- A} \\
+    {\textit{(Autumn 2020)} --- \small Differential Geometry of Curves and Surfaces -- S, Introduction to Biological Physics -- A, Quantum Physics -- S, \textbf{Statistical Physics}\footnotemark[5] -- A, \textbf{Condensed Matter Physics I} -- B} \\
+    {\textit{(Fall 2020)} --- \small \textbf{Classical Mechanics} -- S, \textbf{Mathematical Physics II} -- S, \textbf{Quantum Mechanics- I} -- S, \textbf{Quantum Computation and Quantum Information} -- S} \\
+    {\textit{(Autumn 2021)} --- \small \textbf{Representation Theory}, \textbf{Electromagnetic Theory}, \textbf{Quantum Mechanics II}, \textbf{Quantum Field Theory}, \textbf{Advanced topics in Quantum Computation and Quantum Information}, \textbf{Advanced General Relativity}}
+}
+
+\footnotetext[4]{An S grade, at IITM, corresponds to a grade point of 10/10, A to 9/10 and so on}
+\footnotetext[5]{Boldface courses are graduate level. All courses are at IITM unless specified otherwise}
+
+% \begin{itemize}
+% \setlength{\itemsep}{-0.2cm}
+% \item[] \textit{(Fall 2018)}
+% \item Physics I -- S\footnote{An S grade, at IITM, corresponds to a grade point of 10/10, A to 9/10 and so on}
+% \item Thermodynamics and Kinetic Theory -- A
+% \vspace{0.2cm}
+% \item[] \textit{(Autumn 2019)}
+% \item Differential Equations -- S
+% \item Physics II -- S
+% \vspace{0.2cm}
+% \item[] \textit{(Fall 2019)}
+% \item Introduction to Mathematical Physics -- S
+% \item Probability, Statistics and Stochastic Process -- A
+% \item Mathematics on the computer -- A
+% \vspace{0.2cm}
+% \item[] \textit{(Autumn 2020)}
+% \item Differential Geometry of Curves and Surfaces -- S
+% \item Introduction to Biological Physics -- A
+% \item Quantum Physics -- S
+% \item \textbf{Statistical Physics}\footnote{Boldface courses are graduate level. All courses are at IITM unless specified otherwise} -- A
+% \item \textbf{Condensed Matter Physics I} -- B
+% \vspace{0.2cm}
+% \item[] \textit{(Fall 2020)}
+% \item \textbf{Classical Mechanics} -- S
+% \item \textbf{Mathematical Physics II} -- S
+% \item \textbf{Quantum Mechanics- I} -- S
+% \item \textbf{Quantum Computation and Quantum Information} -- S
+% \vspace{0.2cm}
+% \item[] \textit{(Autumn 2021)}
+% \item \textbf{Representation Theory}
+% \item \textbf{Electromagnetic Theory}
+% \item \textbf{Quantum Mechanics II}
+% \item \textbf{Quantum Field Theory}
+% \item \textbf{Advanced topics in Quantum Computation and Quantum Information}
+% \item \textbf{Advanced General Relativity}
+% \end{itemize}
+\subsection{\large Audited}
+% \begin{itemize}
+% \setlength{\itemsep}{-0.2cm}
+% \item[] \textit{(Autumn 2019)}
+% \item \textbf{Dynamical Systems}
+% \vspace{0.2cm}
+% \item[] \textit{(Autumn 2020)}
+% \item \textbf{Quantum Field Theory}
+% \item \textbf{Quantum Field Theory} (Freddy Cachazo's online PSI course)
+% \item \textbf{Quantum Field Theory II} (Ashoke Sen's online course)
+% \item \textbf{Conformal Field Theory} (online PSI course)
+% \vspace{0.2cm}
+% \item[] \textit{(Fall 2020)}
+% \item \textbf{Classical Field Theory}
+% \item \textbf{Gravitational Physics Review} (Ruth Gregory's online PSI course)
+% \item \textbf{String Theory Review} (Freddy Cachazo's online PSI course)
+% \end{itemize}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{(Autumn 2019)} --- \small \textbf{Dynamical Systems}} \\
+    {\textit{(Autumn 2020)} --- \small \textbf{Quantum Field Theory}, \textbf{Quantum Field Theory} (Freddy Cachazo's online PSI course), \textbf{Quantum Field Theory II} (Ashoke Sen's online course), \textbf{Conformal Field Theory} (online PSI course)} \\
+    {\textit{(Fall 2020)} --- \small \textbf{Classical Field Theory}, \textbf{Gravitational Physics Review} (Ruth Gregory's online PSI course), \textbf{String Theory Review} (Freddy Cachazo's online PSI course)}
+}
+
+\subsection{\large Self-taught}
+% \begin{itemize}
+% \setlength{\itemsep}{-0.2cm}
+% \item[] \textit{(Autumn 2019)}
+% \item \textbf{Classical Mechanics} (Worked through Landau Lifshitz and parts of Arnold)
+% \item \textbf{}TODO
+% \end{itemize}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{(Autumn 2019)} --- \small \textbf{Classical Mechanics} (worked through Landau Lifshitz and parts of Arnold)} \\
+    {\textit{(Fall 2019)} --- \small \textbf{Classical Field Theory, Electromagnetism and Hydrodynamics} (worked through parts of Landau Lifshitz and Jackson)} \\
+    {\textit{(Autumn 2020)} --- \small \textbf{Qauntum Field Theory} (worked through parts of Peskin \& Schroeder and Weinberg Vol 1)} \\
+    {\textit{(Fall 2020)} --- \small \textbf{General Relativity} (worked throough Wald and Eric Poisson's advanced texts), \textbf{Differential Geometry} (worked through parts of John M Lee)}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional Skills}
+
+\subsection{\large Mathematics}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Fluent} --- \small Linear Algebra, Ordinary and Partial Differential Equations, Multivariable Calculus} \\
+    {\textit{Intermediate} --- \small Real and Complex Analysis, Several Complex Variables, Algebraic Topology, Group and Representation Theory, Dynamical systems and chaos} \\
+    {\textit{Basic} --- \small Functional Analysis, Differential Geometry} \\
+    {\textit{Familiar} --- \small Algebraic Geometry and applications to physics, Category theory and categorical viewpoint}
+}
+\vspace{-0.3cm}
+\subsection{\large Scientific Computation}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Fluent} --- \small Mathematica} \\
+    {\textit{Intermediate} --- \small Python with NumPy, SciPy, Matplotlib, Pandas} \\
+    {\textit{Basic} --- \small Cadabra, SageMath, MATLAB}
+}
+\vspace{-0.3cm}
+\subsection{\large Typesetting / Markup}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Intermediate} --- \small \LaTeX, Microsoft/Google Office Suite, Markdown}
+}
+\vspace{-0.3cm}
+\subsection{\large Programming}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Fluent} --- \small Python, Javascript/Typescript} \\
+    {\textit{Intermediate} --- \small C, C++, Bash} \\
+    {\textit{Basic} --- \small Go, Ruby, Java, Web Assembly, x86 Assembly}
+}
+\vspace{-0.3cm}
+\subsection{\large Web Development}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Intermediate} --- \small HTML5, CSS3, Javascipt/DOM, MERN (MongoDB, ExpressJS, ReactJS, NodeJS) stack} \\
+    {\textit{Basic} --- \small Basic web design in Figma and good understanding of design systems} \\
+    {\textit{Familiar} --- \small Angular, VueJS}
+}
+\vspace{-0.3cm}
+\subsection{\large Miscellaneous}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Fluent} --- \small Git/GitHub} \\
+    {\textit{Basic} --- \small Statistical Inference and Analysis, Research Methodology, Digital Electronics and Microprocessors, Computer Architecture (particularly of the simple 8-bit 6052), Data Structures and Algorithms and implementation in Python and Javascript, Software Design Patterns, Understanding of Machine Learning and Deep Learning and familiarity with TensorFlow}
+}
+\vspace{-0.3cm}
+\subsection{\large Soft Skills}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Intermediate} --- \small Team collaboration, Communication, Critical observation and problem solving, Conflict resolution and Negotiation} \\
+    {\textit{Basic} --- \small Leadership, Time management/Scheduling}
+}
+\vspace{-0.3cm}
+\subsection{\large Languages}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\textit{Fluent} --- \small English, Hindi}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Camps / Conferences attended}
+
+\subsection{NIUS (Physics) Camp \hfill \large{June 2019}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Homi Bhabha Centre for Science Education (HBCSE), Mumbai, India} \\
+    {\small (National Initiative on Undergraduate Sciences) A two-week long intense exposure and enrichment camp for begining STEM undergraduates focused on cutting edge research areas of physics, astrophysics and astronomy. \\
+    Attended various talks and workshops by leading Indian physicists on topics such as Beyond Standard Model (BSM), New advances in Condensed matter physics: Weyl semimetals, Topological materials, etc., and modern astronomy. And attended interactive, guided experimental sessions.}
+}
+
+\subsection{Vijyoshi (National Science Camp) \hfill \large{Dec 2017}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Indian Institute of Science Education and Research (IISER), Kolkata, India} \\
+    {\small Invited as part of the KVPY fellowship (see above) while in twelfth grade. A four-day long event comprising of a series of lecture and discussion sessions with eminent scientists and mathematicians from over the World \\ Learnt about the SYK model by Sachdev himself, the Geometric Langlands program, modern cancer research and many other exciting things.}
+}
+
+\subsection{Other seminars and conferences}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    {\small Regularly attend national and international seminars, workshops and conferences on theoretical high energy physics, string theory, and so on. Particularly, the \slink{https://www.icts.res.in/research/string}{ICTS Strings} series, the \slink{https://sites.google.com/physics.iitm.ac.in/dualmysterychannel/home?authuser=0}{Dual Mysteries} series organized by the string theory group at IITM, the \slink{http://qst.theory.tifr.res.in/}{Quantum Spacetime (QST)} series at TIFR, the \slink{https://sitp.stanford.edu/events/series/sitp-colloquia}{SITP Colloquia}, those organized by the \slink{https://www.ias.edu/sns/physics}{IAS}, etc.}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Talks / Lectures}
+\subsection{Relativity from Symmetries \hfill \large{September 2019}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Boltzmann Sessions\footnotemark[6], IITM} \\
+    {\small Delivered a series of four lectures to beginning physics enthusiasts about the modern way of looking at physics in terms of symmetry principles with a fresher on group theory, focusing particularly on special relativity, the Lorentz and Poincare group, the corresponding action principle and physical implications.}
+}
+\footnotetext[6]{A group of highly enthusiastic students at IITM who hold weekly discussion or lecture sessions on topics in theoretical physics and mathematics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Achievements in National level Exams}
+
+\subsection{JEE (Advanced) \hfill \large{May 2018}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Conducted by Indian Institute of Technology (IIT) Kanpur} \\
+    {\small An intense exam taken by STEM students having qualified JEE (Main) for selection into the IITs and other reputed STEM institutions in India. Ranked \textbf{1398} among over 100K participants qualifying JEE (Main) 2018}
+}
+
+\subsection{JEE (Main) \hfill \large{April 2018}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Conducted by Central Board of Secondary Education (CBSE)} \\
+    {\small The precursor exam to JEE Advanced testing problem solving skills in Physics, Chemistry and Mathematics. Taken by over a million high school graduates all over the country every year for selection into STEM colleges of national recognition and repute. Ranked \textbf{376} among over one million participants}
+}
+
+\subsection{KVPY (SA) \hfill \large{Nov 2016}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Organized and funded by DST (see above), Government of India} \\
+    {\small Conducted by the Indian Institute of Science (IISc), Bangalore. A fundamentals-oriented exam in Physics, Chemistry, Biology and Mathematics taken by science enthusiasts in their eleventh grades every year to obtain a prestigious fellowship during their undergraduate years (see above). Ranked \textbf{332} among over 100K participants}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Volunteering / Extracurricular}
+\subsection{IITM Music Club \hfill \large{June -- Nov 2019}}
+\hspace{0.01\linewidth}
+\parbox{0.88\linewidth}{
+    \textit{Worked as one of the coordinators}  \\
+    {\small Have always loved music, both listening to it and making it (can play a bit of the Piano). Worked for the student-run \slink{https://www.instagram.com/iitm_music}{music club} of the institute in organizing various musical events in the Fall 2019 semester and for the annual social and cultural festival of IITM, \slink{https://www.saarang.org/}{Saarang}. Played the bass for a live performance by the then coordinators on a freshmen event. Picked up strong teamwork and collaboration traits.}
+}
 
 \end{document}
